@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hometasker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+<body bgcolor="#f8f8ff">
+<h1 align="center">
+    <fieldset style="border-color: slategrey">Hometasker</fieldset>
+</h1>
+<table align="center">
+    <thead>
+    <tr>
+        <th>Opis</th>
+        <th>Osoba</th>
+        <th>Punkty</th>
+        <th>Termin wykonania</th>
+    </tr>
+    </thead>
+    <tbody>
+<tr th:each="tasks: ${tasks}" class="tasks">
+    <td th:text="${tasks.description}"></td>
+    <td th:text="${tasks.person}"></td>
+    <td th:text="${tasks.points}"></td>
+    <td th:text="${tasks.localDateTime}"></td>
+</tr>
+    </tbody>
+</table>
+
+</body>
+</html>

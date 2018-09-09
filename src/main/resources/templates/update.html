@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hometasker</title>
+</head>
+<body>
+<form >
+    Opis zadania: <input type="text" th:field="${taskToUpdate.description}" /> <br/>
+    Punkty: <input type="number" th:field="${taskToUpdate.points}" /> <br/>
+    Data: <input type="datetime-local" th:field="${taskToUpdate.localDateTime}" /> <br/>
+    <input type="submit" value="Dodaj" />
+</form>
+</body>
+</html>
